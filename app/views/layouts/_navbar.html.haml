@@ -1,0 +1,27 @@
+.cotainer.bg-smoke
+	= link_to (image_tag 'logo.jpg', class: 'imgresponsive'), root_path
+	%ul.nav.navbar-nav.navbar-container.navbar.navbar-right
+		- if user_signed_in?
+			%li.navbar-brand
+				= link_to "Logout", destroy_user_session_path, method: :delete
+			%li.navbar-brand
+				= link_to "Browse", browse_posts_path
+			%li.navbar-brand
+				= link_to "Profile", profile_path(current_user.user_name)
+			%li.navbar-brand
+				= link_to (image_tag 'download.jpg', class: 'imgresponsive img-circle',id: 'camera-icon'), new_post_path
+			%li.navbar-brand#dropdown-nav
+				= render 'notifications/notification_dropdown'
+			%li.navbar-brand
+				%form.form-inline{:method => "get", :action => "/findFriend", :autocomplete => "off"}
+					%input.form-control.mr-sm-2{:type => "search", :placeholder => "Find your friend", :aria-label => "Find your friend", :onKeyUp => "findFriend()", :name => "friend_name"}
+					%button#search-btn{:type => "submit"}
+						= image_tag 'search-icon.png'
+				.search-results 
+					
+		- else
+			%li.navbar-brand
+				= link_to "Register", new_user_registration_path
+			%li.navbar-brand
+				= link_to "Login", new_user_session_path
+			

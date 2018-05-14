@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-  Paperclip.options[:command_path] = "/c/WINDOWS/system32/"
+  Paperclip.options[:command_path] = "C:\\Program Files\\ImageMagick-6.9.9-Q16"
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true

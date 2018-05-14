@@ -1,0 +1,10 @@
+%br
+%h1.col-md-4.col-md-offset-5.text-danger List of Followings
+%br
+.col-md-2.col-md-offset-5
+	- @followings.each do |following|
+		.text-center
+			.col-md-6
+				= link_to icon_avatar_select(following), profile_path(following.user_name) 
+			.col-md-6.h3
+				= link_to following.user_name, profile_path(following.user_name)

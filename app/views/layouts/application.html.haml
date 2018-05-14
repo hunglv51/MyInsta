@@ -1,11 +1,12 @@
-!!!
 %html
 	%head
-    	%title MyInsta
-     		= csrf_meta_tags
-     		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-     		= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
-  
-
-  	%body
-    	= yield 
+		%title MyInsta
+		= csrf_meta_tags
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+		= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+	%body
+		= render 'layouts/navbar'
+		
+		-flash.each do |name, msg|
+			= content_tag :div, msg, class: [:alert, alert_for(name)]
+		= yield 

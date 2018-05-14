@@ -10,8 +10,360 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+ 
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+html {
+height: 100%;
+}
+body {
+height: 100%;
+background-color: #fafafa;
+font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica,
+sans-serif;
+}
+.thumb-img{
+	
+	display: inline;
+	img{
+		margin-top: -1em;
+	}
+}
+#camera-icon {
+	width: 2em;
+	height: 2em;
+	margin-top: -0.5em;
+}
+#search-btn{
+	width: 2em;
+    height: 3.4rem;
+}
+#link-container
+{
+	margin-top: 2em;
+	.row{
+		margin: 1em;
+	}
+}
+.search-results{
+	margin-top: -1em;
+    z-index: 1000;
+    margin-left: -0.5em;
+    margin-right: 1em;
+    background-color: whitesmoke;
+    
+}
+.result-item{
+    	margin: 0.2rem 0.5rem;
+    	display: block;
+		text-decoration: none;
+		color: black;
+		font-size: medium !important;
+
+    }
+.alert {
+margin-bottom: 0px;
+}
+/* ## NAVBAR CUSTOMISATIONS ## */
+.navbar {
+margin-bottom: 0px;
+}
+.navbar-brand {
+padding: 15px 0px;
+a {
+color: #125688;
+
+}
+form{
+	margin-top: 1em;
+	margin-right: 1em;
+	input{
+		margin: 0px -10px; 
+	}
+}
+}
+
+.bg-smoke{
+	background-color: #e9eaea
+}
+
+.navbar-nav a {
+color: #125688;
+margin-top: 10px;
+font-size: xx-large;
+text-decoration: none; 
+}
+.navbar-container {
+min-width: 50%;
+margin: 0 auto;
+float: right;
+}
+.navbar-right li{
+	float: right;
+}
+/* ## POST CUSTOMISATIONS ## */
+.posts-wrapper {
+padding-top: 40px;
+margin: 0 auto;
+max-width: 642px;
+width: 100%;
+}
+.post {
+background-color: #fff;
+border-color: #edeeee;
+border-style: solid;
+border-radius: 3px;
+border-width: 1px;
+margin-bottom: 60px;
+.post-head {
+flex-direction: row;
+height: 64px;
+padding-left: 24px;
+padding-right: 24px;
+padding-top: 24px;
+color: #125688;
+font-size: 15px;
+line-height: 18px;
+.user-name, .time-ago {
+display: inline;
+}
+.user-name {
+font-weight: 500;
+}
+.time-ago {
+color: #A5A7AA;
+float: right;
+}
+}
+.image {
+border-bottom: 1px solid #eeefef;
+border-top: 1px solid #eeefef;
+}
+}
+.post-bottom {
+.user-name, .comment-content {
+display: inline;
+}
+.caption {
+margin-bottom: 7px;
+}
+.user-name {
+font-weight: 500;
+color: #125688;
+font-size: 15px;
+}
+.user-name, .caption-content {
+display: inline;
+}
+#comment {
+margin-top: 7px;
+.user-name {
+font-weight: 500;
+margin-right: 0.3em;
+}
+.delete-comment-icon {
+float: right;
+color: #515151;
+}
+}
+margin-bottom: 7px;
+padding-left: 24px;
+padding-right: 24px;
+padding-bottom: 10px;
+font-size: 15px;
+line-height: 18px;
+}
+.comment_content {
+font-size: 15px;
+line-height: 18px;
+border: medium none;
+width: 100%;
+color: #4B4F54;
+}
+.comment-like-form {
+padding-top: 24px;
+margin-top: 13px;
+margin-left: 24px;
+margin-right: 24px;
+min-height: 68px;
+align-items: center;
+border-top: 1px solid #EEEFEF;
+flex-direction: row;
+justify-content: center;
+}
+/* ## Wrapper and styling for the new, edit & devise views ## */
+.edit-links {
+margin-top: 20px;
+margin-bottom: 40px;
+}
+.registration-bg {
+padding-top: 4em;
+height: 100%;
+background-image: image-url('login_bg.jpg');	
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.login-bg {
+padding-top: 4em;
+height: 100%;
+background-image: image-url('login_bg.jpg');
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.log-in{
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+border: none;
+}
+.panel {
+border-radius: 8px;
+}
+.panel-heading{
+h1 {
+text-align: center;
+}
+}
+#image-preview {
+margin: 0 auto;
+}
+#post_image {
+padding: 1em;
+margin: 0px auto;
+}
+#paginator {
+color: #4090DB;
+height: 120px;
+width: 120px;
+margin: 60px auto 40px;
+position: relative;
+display: table;
+border: 2px solid #4090DB;
+border-radius: 50%;
+:hover {
+border: 1px solid #2D6DA8;
+border-radius: 50%;
+}
+}
+#load_more {
+display: table-cell;
+font-size: 12px;
+padding: 0px 9px;
+vertical-align: middle;
+text-decoration: none;
+a :hover {
+color: #2D6DA8;
+}
+}
+.comments {
+.paginator {
+margin: 0.5em;
+.more-comments {
+color: #A5A7AA;
+}
+}
+}
+.comment-submit-button {
+position: absolute;
+left: -9999px;
+}
+.profile-header {
+padding: 20px 0;
+}
+.profile-image {
+margin: 20px auto;
+height: 152px;
+width: 152px;
+}
+.user-name-and-follow {
+display: inline;
+}
+.profile-user-name {
+	display: inline;
+}
+.edit-button {
+border-color: #818488;
+color: #818488;
+margin-left: 20px;
+}
+.profile-bio {
+margin-top: 20px;
+}
+#user_bio {
+border: 1px solid gray;
+}
+#user_avatar {
+padding: 1em;
+margin: 0px auto;
+}
+.likes {
+margin-top: 20px;
+margin-bottom: 7px;
+}
+.like {
+text-decoration: none;
+color: red;
+}
+.like-button a:hover, a:focus {
+text-decoration: none;
+color: red;
+}
+.notification-dropdown {
+margin-top: 10px;
+button {
+border: none;
+font-size: xx-large;
+}
+}
+.notification-index-list {
+list-style: none;
+li {
+margin-top: 1em;
+background-color: white;
+padding: 1em;
+}
+}
+.follow-button {
+text-transform: uppercase;
+border-color: #4090db;
+color: #4090db;
+margin-left: 20px;
+&:visited, &:focus, &:hover {
+border-color: #2D6396;
+color: #2D6396;
+}
+}
+.unfollow-button {
+text-transform: uppercase;
+border-color: #66bd2b;
+background-color: #66bd2b;
+color: white;
+margin-left: 20px;
+&:visited, &:focus, &:hover {
+border-color: #47821F;
+background-color: #47821F;
+color: white;
+}
+}
+.notification-index-list{
+	a{
+		font-size: large;
+	}
+	br{
+		clear: left;
+	}
+}
+li.notifi{
+		float: left;
+		display: block;
+	}
+.dropdown-menu{
+	a{
+		font-size: smaller;
+	}
+}	
